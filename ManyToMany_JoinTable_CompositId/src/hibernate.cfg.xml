@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- local connection properties -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mtm_c</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<!--<property name="hibernate.connection.pool_size"></property> -->
+		<property name="hbm2ddl.auto">update</property>
+		<!--dialect for Oracle (any version) -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<mapping class="com.syh.test.manytomany_composit.User" />
+		<mapping class="com.syh.test.manytomany_composit.Group" />
+		<mapping class="com.syh.test.manytomany_composit.UserGroup" />
+
+
+	</session-factory>
+</hibernate-configuration>
